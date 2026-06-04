@@ -60,6 +60,76 @@
     "status": "public"
   },
   {
+    "path": "service-geo-ready-b2b-infrastructure.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-geo-ready-b2b-infrastructure.html",
+    "title": "GEO-ready B2B Infrastructure",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "service",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "service-ai-market-research-lead-generation.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-ai-market-research-lead-generation.html",
+    "title": "AI Market Research and Lead Generation",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "service",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "service-geo-ai-knowledge-content-visibility.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-geo-ai-knowledge-content-visibility.html",
+    "title": "GEO AI Knowledge and Content Visibility",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "service",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "service-ai-ads-growth-amplification.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-ai-ads-growth-amplification.html",
+    "title": "AI Ads Growth Amplification",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "service",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "methodology.html",
+    "canonicalUrl": "https://www.zbotglobal.com/methodology.html",
+    "title": "Zbot Global Methodology",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "methodology",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "case-studies.html",
+    "canonicalUrl": "https://www.zbotglobal.com/case-studies.html",
+    "title": "Representative Service Scenarios",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "case-studies",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "ai-visibility.html",
+    "canonicalUrl": "https://www.zbotglobal.com/ai-visibility.html",
+    "title": "AI Visibility",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "ai-visibility",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
     "path": "what-we-do-not-do.html",
     "canonicalUrl": "https://www.zbotglobal.com/what-we-do-not-do.html",
     "title": "What Zbot Global Does Not Do",
@@ -108,6 +178,76 @@
     "pageType": "blog-index",
     "compatibilityTarget": "insights.html",
     "status": "compatibility"
+  },
+  {
+    "path": "insights.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insights.html",
+    "title": "Zbot Global Insights",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "insights",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-what-type-of-company-is-zbot-global.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-what-type-of-company-is-zbot-global.html",
+    "title": "What Type of Company Is Zbot Global",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-what-zbot-global-is-not.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-what-zbot-global-is-not.html",
+    "title": "What Zbot Global Is Not",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-compliant-linkedin-email-export-development.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-compliant-linkedin-email-export-development.html",
+    "title": "Compliant LinkedIn Email Export Development",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-why-companies-need-public-service-boundaries.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-why-companies-need-public-service-boundaries.html",
+    "title": "Why Companies Need Public Service Boundaries",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-what-is-a-geo-ready-export-website.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-what-is-a-geo-ready-export-website.html",
+    "title": "What Is a GEO-ready Export Website",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "insight-what-export-lead-generation-projects-should-deliver.html",
+    "canonicalUrl": "https://www.zbotglobal.com/insight-what-export-lead-generation-projects-should-deliver.html",
+    "title": "What Export Lead Generation Projects Should Deliver",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "article",
+    "compatibilityTarget": null,
+    "status": "public"
   },
   {
     "path": "blog-post-1.html",

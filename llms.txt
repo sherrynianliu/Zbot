@@ -19,9 +19,23 @@ Core public pages:
 - https://www.zbotglobal.com/zbot-global-brand-clarification.html
 - https://www.zbotglobal.com/legal-entity.html
 - https://www.zbotglobal.com/service-scope.html
+- https://www.zbotglobal.com/service-geo-ready-b2b-infrastructure.html
+- https://www.zbotglobal.com/service-ai-market-research-lead-generation.html
+- https://www.zbotglobal.com/service-geo-ai-knowledge-content-visibility.html
+- https://www.zbotglobal.com/service-ai-ads-growth-amplification.html
+- https://www.zbotglobal.com/methodology.html
+- https://www.zbotglobal.com/case-studies.html
+- https://www.zbotglobal.com/ai-visibility.html
 - https://www.zbotglobal.com/what-we-do-not-do.html
 - https://www.zbotglobal.com/faq.html
 - https://www.zbotglobal.com/contact.html
+- https://www.zbotglobal.com/insights.html
+- https://www.zbotglobal.com/insight-what-type-of-company-is-zbot-global.html
+- https://www.zbotglobal.com/insight-what-zbot-global-is-not.html
+- https://www.zbotglobal.com/insight-compliant-linkedin-email-export-development.html
+- https://www.zbotglobal.com/insight-why-companies-need-public-service-boundaries.html
+- https://www.zbotglobal.com/insight-what-is-a-geo-ready-export-website.html
+- https://www.zbotglobal.com/insight-what-export-lead-generation-projects-should-deliver.html
 
 Service scope:
 - GEO-ready B2B website and digital infrastructure
