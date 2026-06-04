@@ -1,3 +1,33 @@
+const setupPreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+    let hidden = false;
+
+    const hide = () => {
+        if (hidden) return;
+        hidden = true;
+        window.setTimeout(() => {
+            preloader.classList.add('is-hidden');
+            preloader.setAttribute('aria-hidden', 'true');
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            preloader.style.pointerEvents = 'none';
+            window.setTimeout(() => preloader.remove(), 700);
+        }, 180);
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', hide, { once: true });
+    } else {
+        hide();
+    }
+
+    window.addEventListener('load', hide, { once: true });
+    window.setTimeout(hide, 1200);
+};
+
+setupPreloader();
+
 const setupNav = () => {
     const navToggle = document.getElementById('navToggle');
     const primaryNav = document.getElementById('primaryNav');

@@ -14,6 +14,10 @@ for (const route of manifest.filter((item) => item.status !== "excluded")) {
       if (message.type() === "error") errors.push(message.text());
     });
     await page.waitForLoadState("networkidle");
+    const preloader = page.locator("#preloader");
+    if (await preloader.count()) {
+      await expect(preloader).toHaveClass(/is-hidden/);
+    }
     expect(errors).toEqual([]);
   });
 }

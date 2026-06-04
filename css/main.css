@@ -1779,8 +1779,9 @@ html.is-modal-open body {
         }
 
         .preloader.is-hidden {
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
         }
 
         .other-hero {
@@ -3377,7 +3378,6 @@ html.is-modal-open body {
                 align-items: stretch;
             }
         }
-
 
 
 
