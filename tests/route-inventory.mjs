@@ -41,8 +41,8 @@ for (const route of manifest) {
   }
   const html = fs.readFileSync(path.join(root, route.path), "utf8");
   const expectedCanonicalHref = route.canonicalTargetUrl || route.canonicalUrl;
-  if (route.status !== "excluded" && !html.includes(expectedCanonicalHref)) {
-    findings.push(`${route.path}: missing canonical URL ${expectedCanonicalHref}`);
+  if (route.status !== "excluded" && !extractCanonicalHrefs(html).includes(expectedCanonicalHref)) {
+    findings.push(`${route.path}: missing canonical link href ${expectedCanonicalHref}`);
   }
   if (route.status === "excluded" && !/<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
     findings.push(`${route.path}: excluded route must include a robots noindex meta tag`);
@@ -88,6 +88,16 @@ console.log("Route inventory passed.");
 
 function extractHrefs(html) {
   return [...html.matchAll(/\shref=["']([^"']+)["']/gi)].map((match) => match[1]);
+}
+
+function extractCanonicalHrefs(html) {
+  return [...html.matchAll(/<link\b[^>]*>/gi)]
+    .filter((match) => /\srel=["']canonical["']/i.test(match[0]))
+    .map((match) => {
+      const href = match[0].match(/\shref=["']([^"']+)["']/i);
+      return href?.[1] || "";
+    })
+    .filter(Boolean);
 }
 
 function normalizeInternalHref(href) {
