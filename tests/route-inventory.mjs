@@ -40,8 +40,9 @@ for (const route of manifest) {
     continue;
   }
   const html = fs.readFileSync(path.join(root, route.path), "utf8");
-  if (route.status !== "excluded" && !html.includes(route.canonicalUrl)) {
-    findings.push(`${route.path}: missing canonical URL ${route.canonicalUrl}`);
+  const expectedCanonicalHref = route.canonicalTargetUrl || route.canonicalUrl;
+  if (route.status !== "excluded" && !html.includes(expectedCanonicalHref)) {
+    findings.push(`${route.path}: missing canonical URL ${expectedCanonicalHref}`);
   }
   if (route.status === "excluded" && !/<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
     findings.push(`${route.path}: excluded route must include a robots noindex meta tag`);
