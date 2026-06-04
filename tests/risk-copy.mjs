@@ -3,8 +3,9 @@ import path from "node:path";
 
 const root = process.cwd();
 const files = [
-  ...fs.readdirSync(root).filter((file) => /\.(html|xml|txt)$/i.test(file)),
+  ...fs.readdirSync(root).filter((file) => /\.(html|xml|txt|css)$/i.test(file)),
   ...walk(path.join(root, "js")).filter((file) => /\.(js|json)$/i.test(file)).map((file) => path.relative(root, file)),
+  ...walk(path.join(root, "css")).filter((file) => /\.css$/i.test(file)).map((file) => path.relative(root, file)),
 ];
 
 const riskyPatterns = [
@@ -40,7 +41,7 @@ for (const file of files) {
   const text = fs.readFileSync(fullPath, "utf8");
   for (const pattern of riskyPatterns) {
     for (const match of text.matchAll(pattern)) {
-      if (!isAllowedBoundary(text, match.index ?? 0)) {
+      if (!isAllowedBoundary(text, match.index ?? 0, file)) {
         findings.push(`${file}: risky copy "${match[0]}" is outside data-risk-context="boundary"`);
       }
     }
@@ -55,13 +56,43 @@ if (findings.length) {
 
 console.log("Risk-copy scan passed.");
 
-function isAllowedBoundary(text, index) {
-  const before = text.slice(0, index);
-  const marker = before.lastIndexOf('data-risk-context="boundary"');
-  if (marker === -1) return false;
-  const nextClose = text.indexOf("</", index);
-  const nextMarker = text.indexOf('data-risk-context="boundary"', marker + 1);
-  return nextClose !== -1 && (nextMarker === -1 || nextMarker > index);
+function isAllowedBoundary(text, index, file) {
+  if (/\.html$/i.test(file)) return isInsideHtmlBoundary(text, index);
+  const line = getLineAt(text, index);
+  return /\b(?:does\s+not|do\s+not|is\s+not|are\s+not|not\s+(?:provide|offer|do|involve|support)|no\s+)\b/i.test(line)
+    || /(?:不是|不做|不提供|不涉及|不从事|不承诺|不会)/.test(line);
+}
+
+function isInsideHtmlBoundary(text, index) {
+  const stack = [];
+  const tagPattern = /<\/?([a-z][a-z0-9-]*)\b[^>]*>/gi;
+  let match;
+  while ((match = tagPattern.exec(text)) && match.index < index) {
+    const tag = match[1].toLowerCase();
+    const source = match[0];
+    if (source.startsWith("</")) {
+      for (let i = stack.length - 1; i >= 0; i -= 1) {
+        const current = stack.pop();
+        if (current?.tag === tag) break;
+      }
+      continue;
+    }
+    const selfClosing = /\/>$/.test(source) || isVoidTag(tag);
+    const inheritedBoundary = stack.some((item) => item.boundary);
+    const boundary = inheritedBoundary || /\sdata-risk-context=["']boundary["']/i.test(source);
+    if (!selfClosing) stack.push({ tag, boundary });
+  }
+  return stack.some((item) => item.boundary);
+}
+
+function isVoidTag(tag) {
+  return new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]).has(tag);
+}
+
+function getLineAt(text, index) {
+  const start = text.lastIndexOf("\n", index) + 1;
+  const end = text.indexOf("\n", index);
+  return text.slice(start, end === -1 ? text.length : end);
 }
 
 function walk(dir) {

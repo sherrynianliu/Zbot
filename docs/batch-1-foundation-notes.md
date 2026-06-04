@@ -57,3 +57,14 @@ Additional individual script findings:
 
 These failures define the current risk baseline. Later batches must reduce them to zero before PR creation.
 
+## Post-review Contract Fixes
+
+After subagent review, Batch 1 QA contracts were tightened before Batch 2 implementation:
+
+- `route-inventory`: now requires `llms.txt` when routes opt in, rejects extra sitemap/llms URLs, checks excluded routes for `noindex`, verifies compatibility targets, and flags public links to excluded pages.
+- `contact-inventory`: now enforces approved visible contact text, approved `mailto:` / `tel:` / WhatsApp / LinkedIn hrefs, blocked legacy values, and the confirmed WeChat ID `zbotglobal`.
+- `proof-claims`: now uses page-specific allowlist entries with required source URLs and allowed snippets instead of global substring matching.
+- `risk-copy`: now scans CSS and validates risky wording against the actual HTML ancestor carrying `data-risk-context="boundary"`.
+- `schema-jsonld`: now checks nested JSON-LD graph items and blocks unverified customer/case `Organization` entries.
+
+Expected failures after these fixes include old contact values, missing `llms.txt`, excluded pages without `noindex`, and old proof-style claims. Those are content debt for the next batches, not QA setup failures.
