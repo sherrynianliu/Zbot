@@ -1,0 +1,142 @@
+[
+  {
+    "path": "index.html",
+    "canonicalUrl": "https://www.zbotglobal.com/",
+    "title": "Zbot Global",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "home",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "about-us.html",
+    "canonicalUrl": "https://www.zbotglobal.com/about-us.html",
+    "title": "About Zbot",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "about",
+    "compatibilityTarget": "about-zbot-global.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "faq.html",
+    "canonicalUrl": "https://www.zbotglobal.com/faq.html",
+    "title": "Zbot FAQ",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "faq",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "contact.html",
+    "canonicalUrl": "https://www.zbotglobal.com/contact.html",
+    "title": "Contact Zbot",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "contact",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "client-request.html",
+    "canonicalUrl": "https://www.zbotglobal.com/client-request.html",
+    "title": "Client Request",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "form",
+    "compatibilityTarget": null,
+    "status": "public"
+  },
+  {
+    "path": "blog.html",
+    "canonicalUrl": "https://www.zbotglobal.com/blog.html",
+    "title": "Zbot Blog",
+    "includeInSitemap": true,
+    "includeInLlms": true,
+    "pageType": "blog-index",
+    "compatibilityTarget": "insights.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "blog-post-1.html",
+    "canonicalUrl": "https://www.zbotglobal.com/blog-post-1.html",
+    "title": "Zbot Blog Post",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "blog-post",
+    "compatibilityTarget": null,
+    "status": "compatibility"
+  },
+  {
+    "path": "service-ai-strategy.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-ai-strategy.html",
+    "title": "AI Strategy Service",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "service-legacy",
+    "compatibilityTarget": "service-geo-ready-b2b-infrastructure.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "service-data-intelligence.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-data-intelligence.html",
+    "title": "Data Intelligence Service",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "service-legacy",
+    "compatibilityTarget": "service-ai-market-research-lead-generation.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "service-outreach-automation.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-outreach-automation.html",
+    "title": "Outreach Service",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "service-legacy",
+    "compatibilityTarget": "service-ai-market-research-lead-generation.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "service-ai-optimization.html",
+    "canonicalUrl": "https://www.zbotglobal.com/service-ai-optimization.html",
+    "title": "AI Optimization Service",
+    "includeInSitemap": true,
+    "includeInLlms": false,
+    "pageType": "service-legacy",
+    "compatibilityTarget": "service-geo-ai-knowledge-content-visibility.html",
+    "status": "compatibility"
+  },
+  {
+    "path": "demo.html",
+    "canonicalUrl": "https://www.zbotglobal.com/demo.html",
+    "title": "Demo",
+    "includeInSitemap": false,
+    "includeInLlms": false,
+    "pageType": "demo",
+    "compatibilityTarget": null,
+    "status": "excluded"
+  },
+  {
+    "path": "zbot-landing.html",
+    "canonicalUrl": "https://www.zbotglobal.com/zbot-landing.html",
+    "title": "Legacy Landing",
+    "includeInSitemap": false,
+    "includeInLlms": false,
+    "pageType": "campaign",
+    "compatibilityTarget": null,
+    "status": "excluded"
+  },
+  {
+    "path": "zbot-linkedin-landing.html",
+    "canonicalUrl": "https://www.zbotglobal.com/zbot-linkedin-landing.html",
+    "title": "LinkedIn Campaign",
+    "includeInSitemap": false,
+    "includeInLlms": false,
+    "pageType": "campaign",
+    "compatibilityTarget": null,
+    "status": "excluded"
+  }
+]

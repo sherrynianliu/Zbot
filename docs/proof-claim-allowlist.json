@@ -1,0 +1,57 @@
+[
+  {
+    "claim": "Founder LinkedIn profile: Nian Sherry Liu",
+    "source": "https://www.linkedin.com/in/nian-sherry-liu-07a7a5138/",
+    "sourceType": "user-provided public profile",
+    "allowedPages": [
+      "about-us.html",
+      "about-zbot-global.html",
+      "methodology.html"
+    ],
+    "allowedWording": "May link as a public founder reference. Do not state employer history unless public content is verified during implementation."
+  },
+  {
+    "claim": "Founder LinkedIn profile: Yusong Lin",
+    "source": "https://www.linkedin.com/in/yusong-lin/",
+    "sourceType": "user-provided public profile",
+    "allowedPages": [
+      "about-us.html",
+      "about-zbot-global.html",
+      "methodology.html"
+    ],
+    "allowedWording": "May link as a public founder reference. Do not state employer history unless public content is verified during implementation."
+  },
+  {
+    "claim": "Public research reference: Google Scholar profile",
+    "source": "https://scholar.google.com/citations?hl=zh-CN&user=auhnI1MAAAAJ",
+    "sourceType": "user-provided public research reference",
+    "allowedPages": [
+      "about-us.html",
+      "about-zbot-global.html",
+      "methodology.html"
+    ],
+    "allowedWording": "May link as a public research reference. Do not claim product performance or client outcomes."
+  },
+  {
+    "claim": "Public research reference: Google Scholar citation",
+    "source": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=B-b0_4gAAAAJ&sortby=pubdate&citation_for_view=B-b0_4gAAAAJ:p2g8aNsByqUC",
+    "sourceType": "user-provided public research reference",
+    "allowedPages": [
+      "about-us.html",
+      "about-zbot-global.html",
+      "methodology.html"
+    ],
+    "allowedWording": "May link as a public research reference. Do not claim product performance or client outcomes."
+  },
+  {
+    "claim": "Public research reference: JMIR publication",
+    "source": "https://www.jmir.org/2023/1/e46084/",
+    "sourceType": "user-provided public publication reference",
+    "allowedPages": [
+      "about-us.html",
+      "about-zbot-global.html",
+      "methodology.html"
+    ],
+    "allowedWording": "May link as a public publication reference. Do not claim product performance or client outcomes."
+  }
+]

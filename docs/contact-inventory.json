@@ -1,0 +1,49 @@
+{
+  "approved": {
+    "email": "customer@zbotglobal.com",
+    "phoneNorthAmerica": "+1 647-864-5968",
+    "phoneChina": "+86 173-3618-8628",
+    "whatsapp": "+1 647-864-5968",
+    "wechat": "zbotglobal",
+    "linkedinCompany": "https://www.linkedin.com/company/zbottechnology/posts/?feedView=all"
+  },
+  "observed": [
+    {
+      "type": "email",
+      "value": "customer@zbotglobal.com",
+      "approved": true
+    },
+    {
+      "type": "email",
+      "value": "hello@zbot.ai",
+      "approved": false,
+      "note": "Found in client-request.html; replace or remove unless user approves."
+    },
+    {
+      "type": "phone",
+      "value": "+1 647-864-5968",
+      "approved": true
+    },
+    {
+      "type": "phone",
+      "value": "+86 173-3618-8628",
+      "approved": true
+    },
+    {
+      "type": "wechat",
+      "value": "327803155",
+      "approved": false,
+      "note": "User approved replacement value: zbotglobal."
+    },
+    {
+      "type": "wechat",
+      "value": "zbotglobal",
+      "approved": true
+    },
+    {
+      "type": "linkedinCompany",
+      "value": "https://www.linkedin.com/company/zbottechnology/posts/?feedView=all",
+      "approved": true
+    }
+  ]
+}
