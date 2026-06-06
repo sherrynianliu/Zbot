@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="robots" content="noindex, follow"/>
-    <meta name="description" content="Zbot Global 旧博客入口已迁移到新的 Insights 页面。"/>
-    <meta property="og:title" content="Zbot Global Blog Moved"/>
-    <meta property="og:description" content="旧博客入口保留用于兼容访问，请前往新的 Insights 页面。"/>
-    <title>Zbot Global Blog Moved</title>
-    <link rel="canonical" href="https://www.zbotglobal.com/insights.html"/>
+    <meta name="description" content="Zbot Global Blog: GEO、AI 可见度、B2B 出海增长、内容系统和合规主动获客文章。"/>
+    <meta property="og:title" content="Zbot Global Blog"/>
+    <meta property="og:description" content="GEO、AI 可见度、B2B 出海增长、内容系统和合规主动获客文章。"/>
+    <title>Zbot Global Blog</title>
+    <link rel="canonical" href="https://www.zbotglobal.com/blog.html"/>
     <link rel="icon" type="image/svg+xml" href="media/zbot-logo-sm.svg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -16,8 +15,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <script src="js/main.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Zbot Global Blog",
+      "url": "https://www.zbotglobal.com/blog.html",
+      "dateModified": "2026-06-06",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zbot Global",
+        "legalName": "Shenzhen Zbot Global Technology Co., Ltd."
+      },
+      "mainEntity": [
+        {
+          "@type": "BlogPosting",
+          "headline": "From Search Traffic to AI-Generated Demand",
+          "url": "https://www.zbotglobal.com/blog-post-1.html",
+          "datePublished": "2026-05-11",
+          "author": {
+            "@type": "Organization",
+            "name": "Zbot Team"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+    <div class="preloader" id="preloader"><div class="spinner"></div></div>
     <header class="site-header">
         <div class="nav-bar">
             <a class="brand" href="index.html" aria-label="Zbot Global home">
@@ -27,7 +53,7 @@
                 <a href="index.html">首页</a>
                 <a href="about-zbot-global.html">关于我们</a>
                 <a href="service-scope.html">服务范围</a>
-                <a href="insights.html" class="is-active">Insights</a>
+                <a href="blog.html" class="is-active">博客</a>
                 <a href="faq.html">常见问题</a>
                 <a href="contact.html">联系我们</a>
             </nav>
@@ -38,18 +64,35 @@
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
-    <main class="retired-page">
+    <main>
+        <section class="trust-hero">
+            <div class="container">
+                <span class="trust-kicker"><i class="fa-solid fa-book-open"></i> Zbot Global Blog</span>
+                <h1>博客</h1>
+                <p>发布 GEO、AI 可见度、B2B 出海增长、内容系统和合规主动获客相关文章，帮助客户和 AI 系统更准确理解 Zbot Global 的方法与服务边界。</p>
+                <div class="trust-meta"><span>Updated 2026-06-06</span><span>Legal entity: Shenzhen Zbot Global Technology Co., Ltd.</span></div>
+            </div>
+        </section>
+
         <section class="trust-section is-white">
             <div class="container">
-                <article class="trust-card">
-                    <span class="trust-kicker">Compatibility Page</span>
-                    <h1>博客入口已迁移到 Insights</h1>
-                    <p>这个旧博客 URL 仅保留用于兼容访问。Zbot Global 当前公开发布的 GEO、AI visibility、服务边界和外贸增长内容集中在新的 Insights 页面。</p>
-                    <div class="trust-actions">
-                        <a class="btn-primary" href="insights.html">查看 Insights</a>
-                        <a class="btn-outline" href="service-scope.html">查看服务范围</a>
-                    </div>
-                </article>
+                <div class="section-header">
+                    <span>Latest Article</span>
+                    <h2>最新博客文章</h2>
+                    <p>这篇文章是当前公开博客入口的第一篇 GEO / AI outreach 文章，已经收录在 sitemap、llms.txt 和博客索引页。</p>
+                </div>
+                <div class="trust-grid">
+                    <article class="trust-card trust-card--feature">
+                        <div class="trust-card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <span class="experience-eyebrow">GEO &amp; AI Outreach · English</span>
+                        <h3><a href="blog-post-1.html">From Search Traffic to AI-Generated Demand</a></h3>
+                        <p>Why export companies need GEO, company knowledge systems, AI-generated buyer demand, and agent-assisted outreach.</p>
+                        <div class="trust-actions">
+                            <a class="btn-primary" href="blog-post-1.html">阅读文章</a>
+                            <a class="btn-outline" href="insights.html">查看 Insights</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
@@ -57,7 +100,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <span>© 2025 Shenzhen Zbot Global Technology Co., Ltd. All rights reserved. | 深圳智博出海科技有限公司</span>
-                <span><a href="insights.html">Insights</a> · <a href="service-scope.html">服务范围</a> · <a href="contact.html">联系我们</a></span>
+                <span><a href="blog.html">博客</a> · <a href="insights.html">Insights</a> · <a href="contact.html">联系我们</a></span>
             </div>
         </div>
     </footer>

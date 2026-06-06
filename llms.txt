@@ -29,6 +29,7 @@ Core public pages:
 - https://www.zbotglobal.com/what-we-do-not-do.html
 - https://www.zbotglobal.com/faq.html
 - https://www.zbotglobal.com/contact.html
+- https://www.zbotglobal.com/blog.html
 - https://www.zbotglobal.com/insights.html
 - https://www.zbotglobal.com/blog-post-1.html
 - https://www.zbotglobal.com/insight-what-type-of-company-is-zbot-global.html

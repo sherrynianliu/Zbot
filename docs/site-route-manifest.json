@@ -172,13 +172,12 @@
   {
     "path": "blog.html",
     "canonicalUrl": "https://www.zbotglobal.com/blog.html",
-    "canonicalTargetUrl": "https://www.zbotglobal.com/insights.html",
-    "title": "Zbot Blog",
-    "includeInSitemap": false,
-    "includeInLlms": false,
+    "title": "Zbot Global Blog",
+    "includeInSitemap": true,
+    "includeInLlms": true,
     "pageType": "blog-index",
-    "compatibilityTarget": "insights.html",
-    "status": "compatibility"
+    "compatibilityTarget": null,
+    "status": "public"
   },
   {
     "path": "insights.html",
