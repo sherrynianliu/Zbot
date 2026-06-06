@@ -58,6 +58,14 @@ const setupNav = () => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
         const menu = dropdown.querySelector('.dropdown-menu');
         const supportsHover = window.matchMedia('(hover: hover)').matches;
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+        menu.querySelectorAll('a').forEach(link => {
+            const linkPath = link.getAttribute('href')?.split('/').pop();
+            if (linkPath === currentPath) {
+                link.classList.add('is-active');
+            }
+        });
 
         const openDropdown = () => {
             dropdown.classList.add('is-open');
@@ -102,12 +110,14 @@ const setupNav = () => {
 
 
         toggle.addEventListener('click', (event) => {
-            if (!supportsHover) {
-                event.preventDefault();
-                const willOpen = !dropdown.classList.contains('is-open');
-                dropdown.classList.toggle('is-open', willOpen);
-                toggle.setAttribute('aria-expanded', willOpen.toString());
+            event.preventDefault();
+            if (supportsHover) {
+                openDropdown();
+                return;
             }
+            const willOpen = !dropdown.classList.contains('is-open');
+            dropdown.classList.toggle('is-open', willOpen);
+            toggle.setAttribute('aria-expanded', willOpen.toString());
         });
 
         menu.addEventListener('click', closeDropdown);

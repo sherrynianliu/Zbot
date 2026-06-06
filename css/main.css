@@ -154,6 +154,7 @@
 }
 
 .dropdown-toggle {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -166,18 +167,52 @@
     transition: color 0.3s ease;
 }
 
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #00c6ff, #00f9a1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
 .dropdown-toggle i {
     font-size: 12px;
     transition: transform 0.3s ease;
 }
 
+.dropdown-toggle .fa-chevron-down {
+    width: 0.55em;
+    height: 0.55em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transform-origin: 58% 58%;
+}
+
+.dropdown-toggle .fa-chevron-down::before {
+    content: "";
+}
+
 .nav-dropdown.is-open .dropdown-toggle,
-.nav-dropdown:hover .dropdown-toggle {
+.nav-dropdown:hover .dropdown-toggle,
+.dropdown-toggle.is-active {
     color: var(--nav-link-active);
 }
 
-.nav-dropdown.is-open .dropdown-toggle i {
-    transform: rotate(180deg);
+.nav-dropdown.is-open .dropdown-toggle::after,
+.nav-dropdown:hover .dropdown-toggle::after,
+.dropdown-toggle.is-active::after {
+    transform: scaleX(1);
+}
+
+.nav-dropdown.is-open .dropdown-toggle .fa-chevron-down {
+    transform: rotate(225deg);
 }
 
 .dropdown-menu {
@@ -203,6 +238,11 @@
     color: #223b6d;
     font-size: 14px;
     font-weight: 500;
+}
+
+.dropdown-menu a.is-active {
+    color: var(--nav-link-active);
+    font-weight: 700;
 }
 
 .nav-dropdown:hover .dropdown-menu,
@@ -259,6 +299,46 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.nav-toggle .fa-bars,
+.nav-toggle .fa-xmark {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.nav-toggle .fa-bars::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    box-shadow: 0 6px 0 currentColor, 0 12px 0 currentColor;
+}
+
+.nav-toggle .fa-xmark::before,
+.nav-toggle .fa-xmark::after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    width: 16px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.nav-toggle .fa-xmark::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle .fa-xmark::after {
+    transform: rotate(-45deg);
 }
 
 @media (max-width: 920px) {
@@ -2003,6 +2083,10 @@ html.is-modal-open body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .other-hero-media--geo img {
+            object-position: center center;
         }
 
         .other-hero::after {
