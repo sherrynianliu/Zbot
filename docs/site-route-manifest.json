@@ -172,7 +172,7 @@
   {
     "path": "blog.html",
     "canonicalUrl": "https://www.zbotglobal.com/blog.html",
-    "title": "Zbot Global Blog",
+    "title": "Zbot Global 博客 | GEO与B2B出海增长",
     "includeInSitemap": true,
     "includeInLlms": true,
     "pageType": "blog-index",
@@ -182,7 +182,7 @@
   {
     "path": "insights.html",
     "canonicalUrl": "https://www.zbotglobal.com/insights.html",
-    "title": "Zbot Global Insights",
+    "title": "Zbot Global Insights | GEO与AI搜索可信度",
     "includeInSitemap": true,
     "includeInLlms": true,
     "pageType": "insights",
