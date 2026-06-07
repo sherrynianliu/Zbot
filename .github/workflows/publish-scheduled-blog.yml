@@ -1,0 +1,58 @@
+name: Publish scheduled blog post
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Publish even if a post was already published today"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-blog-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Publish next scheduled blog post
+        env:
+          FORCE_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.force == 'true' && '1' || '0' }}
+        run: |
+          args="--publish-next"
+          if [ "$FORCE_PUBLISH" = "1" ]; then
+            args="$args --force"
+          fi
+          PUBLISH_DATE="$(date -u +%F)" node .github/scripts/publish-scheduled-blog.mjs $args
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No scheduled blog changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog*.html docs/site-route-manifest.json docs/scheduled-blog-state.json sitemap.xml llms.txt
+          git commit -m "chore: publish scheduled blog post"
+          git push
