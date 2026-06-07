@@ -1,0 +1,14 @@
+{
+  "name": "zbot-global-static-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/risk-copy.mjs && node tests/proof-claims.mjs && node tests/contact-inventory.mjs && node tests/route-inventory.mjs && node tests/schema-jsonld.mjs && node tests/html-sanity.mjs",
+    "lint": "node tests/html-sanity.mjs",
+    "test:e2e": "playwright test",
+    "qa": "npm run test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0"
+  }
+}
